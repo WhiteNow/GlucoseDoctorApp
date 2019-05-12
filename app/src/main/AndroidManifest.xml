@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="pe.edu.upc.GlucoCheck">
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+            android:name="android.hardware.bluetooth_le"
+            android:required="true"/>
+
+    <application
+            android:name=".ConnnectivityApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".presentation.glucose_measure.GlucoseMeasureActivity">
+        </activity>
+        <activity android:name=".presentation.patient_education.PatientEducActivity">
+        </activity>
+        <activity android:name=".presentation.my_info.MyInfoActivity">
+        </activity>
+        <activity android:name=".presentation.appointmets.AppoinmentsActivity">
+        </activity>
+        <activity android:name=".presentation.bluetooth_list.ScanBLEActivity">
+        </activity>
+        <activity android:name=".presentation.bluetooth_list.BLEActivity">
+        </activity>
+        <activity android:name=".presentation.bluetooth_list.BluetoothActivity">
+        </activity>
+        <activity
+                android:name=".presentation.treatments.TreatmentActivity"
+                android:label="@string/title_activity_treatment"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".presentation.sign_up.SignUpActivity">
+        </activity>
+        <activity android:name=".presentation.home_menu.HomeMenuActivity">
+        </activity>
+        <activity android:name=".presentation.home.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
+    </application>
+
+</manifest>

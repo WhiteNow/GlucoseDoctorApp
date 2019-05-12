@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="translucent">#00FFFFFF</color>
+    <color name="gradient_bg_start">#159957</color>
+    <color name="gradient_bg_center">#2F808D</color>
+    <color name="gradient_bg_end">#155799</color>
+    <color name="edit_light_bg">#9EBDFFF3</color>
+    <color name="login_form_detail">#ccffffff</color>
+    <color name="login_form_detail_light">#66ffffff</color>
+    <color name="black_text">#141619</color>
+
+ <!--Paleta de colores glucosApp-->
+    <color name= "baseColor">#FFC566</color>
+    <color name="backgroundColor">#D9D0C5</color>
+    <color name="titlesColor">#A6261B</color>
+    <color name="textColor">#012619</color>
+    <color name="textLightColor">#A3A1A8</color>
+    <color name="buttonDarkColor">#733C30</color>
+    <color name="baseDarkColor">#BF8F73</color>
+
+</resources>

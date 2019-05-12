@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">GlucoCheck</string>
+    <string name="login_string">Ingresar</string>
+    <string name="password_hint">Password</string>
+    <string name="usuario_hint">Usuario</string>
+    <string name="email_placeholder">email@example.com</string>
+    <string name="password_placeholder">*********</string>
+    <string name="forgot_placeholder">¿Olvidaste tu contraseña?</string>
+    <string name="signup_placeholder">¿No tienes una cuenta aún?</string>
+    <string name="recover_pass_placeholder">Ingrese su e-mail:</string>
+    <string name="send_email_placeholder">Eviar e-mail</string>
+    <string name="cancel_placeholder">Cancelar</string>
+    <string name="title_activity_treatment">TreatmentActivity</string>
+    <string name="treatments_title">Tratamiento</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="medicamento_label">Medicamento:</string>
+    <string name="descripcion_label">Descripción:</string>
+    <string name="volver_btn_text">Volver</string>
+    <string name="ingresar_btn_text">Ingresar</string>
+    <string name="breakfast_label">Desayuno:</string>
+    <string name="almuerzo_label">Almuerzo:</string>
+    <string name="cena_label">Cena:</string>
+    <string name="btn_refresh">Actualizar</string>
+
+
+    <string name="diabetes_info">Enfermedad crónica y progresiva caracterizada por la insuficiencia o nula producción de
+        insulina, promoviendo el aumento de glucosa en la sangre (World Health Organization, 2010). Una persona que
+        padece diabetes no absorbe adecuadamente la glucosa, lo que produce daños en los tejidos del cuerpo y provoca
+        complicaciones de salud que pueden llegar a ser mortales.
+    </string>
+    <string name="diabetes2_info">El cuerpo es capaz de producir insulina, pero existe una resistencia a ella. Con el
+        tiempo, los niveles de insulina pueden llegar a ser insuficientes, provocando altos niveles de glucosa en la
+        sangre. Asimismo, es el tipo de diabetes más común y aparece principalmente en adultos y ancianos. Los síntomas
+        son muy parecidos a los de diabetes tipo 1; sin embargo, suelen ser menos marcados, haciendo que las personas no
+        sean conscientes de su condición durante mucho tiempo.
+    </string>
+
+    <string name="glucose_info">La glucosa es un carbohidrato indispensable para el metabolismo energético del cerebro.
+        En forma de glucógeno, el cuerpo la reserva y sólo dura unos cuantos minutos, razón por la cual se necesita el
+        aporte ininterrumpido de la glucosa por parte de la sangre arterial.
+    </string>
+    <string name="insuline_info">Hormona producida por el páncreas que permite la transferencia de la glucosa de los
+        alimentos a las células del cuerpo, convirtiéndolo en energía necesaria para el funcionamiento de los músculos y
+        tejidos.
+    </string>
+    <string name="glucometer_info">Dispositivo que permite medir la concentración de glucosa en la sangre y son
+        utilizados por los propios pacientes para obtener valores de glucosa, llevando un autocontrol de la diabetes.
+    </string>
+    <string name="glucometer2_info">Aparecieron en 1970, incorporando el concepto de auto-monitorización de la glucemia
+        capilar. Se encuentran compuestos de un dispositivo de punción con lanceta incorporada, que adquiere una muestra
+        de sangre a través del contacto con la tira reactiva.
+    </string>
+
+</resources>

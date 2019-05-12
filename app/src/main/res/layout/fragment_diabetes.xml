@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             tools:context=".presentation.patient_education.fragments.DiabetesFragment">
+
+
+ <ScrollView android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toTopOf="parent">
+
+     <RelativeLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+         <!--<ImageView-->
+                 <!--android:id="@+id/txt2Speech"-->
+                 <!--android:src="@drawable/ic_volume_up_black_24dp"-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:layout_alignParentEnd="true"-->
+                 <!--android:layout_marginTop="24dp"-->
+                 <!--android:layout_marginEnd="24dp"-->
+         <!--/>-->
+
+         <TextView android:id="@+id/q_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="¿Qué es una enfermedad crónica?"
+                   android:textSize="16dp"
+                   android:layout_marginTop="24dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+         />
+
+         <TextView android:id="@+id/answer_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/q_lbl"
+                   android:textSize="18sp"
+                   android:layout_marginTop="6dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:textColor="#000"
+                   android:text="También conocida como enfermedades no trasmisibles (ENT), son el resultado de la combinación de factores genéticos, fisiológicos, ambientales y de comportamiento; generando padecimiento de larga duración (más de tres meses) y lenta progresión (World Health Organization, 2018). Existe la posibilidad de ausencia de síntomas en su inicio. Asimismo, los principales tipos de enfermedades crónicas son cardiovasculares, respiratorias, cáncer, hipertensión y diabetes. Los factores de riesgos primarios que permiten el desarrollo de enfermedades crónicas son: el tabaquismo, dieta poco saludable, falta de actividad física y el consumo de alcohol. También los factores intermedios se derivan entre presión arterial, obesidad y alteraciones en el metabolismo de la glucosa y los lípidos (Beratarrechea, 2010)."
+         />
+
+
+
+         <TextView android:id="@+id/q1_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="¿Qué es la diabetes?"
+                   android:textSize="16dp"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:layout_below="@id/answer_lbl"
+         />
+
+         <TextView android:id="@+id/answer1_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/q1_lbl"
+                   android:textSize="18sp"
+                   android:layout_marginTop="6dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:textColor="#000"
+                   android:text="@string/diabetes_info"
+         />
+
+         <TextView android:id="@+id/q2_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="¿Qué es la diabetes tipo 2?"
+                   android:textSize="16dp"
+                   android:layout_below="@id/answer1_lbl"
+                   android:layout_marginTop="12dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+         />
+
+         <TextView android:id="@+id/answer2_lbl"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/q2_lbl"
+                   android:textSize="18sp"
+                   android:layout_marginTop="6dp"
+                   android:layout_marginStart="30dp"
+                   android:layout_marginEnd="30dp"
+                   android:textColor="#000"
+                   android:text="@string/diabetes2_info"
+                   android:layout_marginBottom="20dp"
+         />
+
+
+     </RelativeLayout>
+
+ </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

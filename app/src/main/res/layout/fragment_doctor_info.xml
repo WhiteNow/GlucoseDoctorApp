@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             tools:context=".presentation.my_info.fragments.DoctorInfoFragment">
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="12dp">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff">
+
+    <TextView
+            android:id="@+id/name_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre completo"
+            android:fontFamily="@font/roboto"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp"
+    />
+
+    <TextView
+            android:id="@+id/name_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carlos Plaza Espinoza"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/name_lbl"
+            android:textColor="#000"
+            android:textSize="16sp"
+    />
+
+    <TextView
+            android:id="@+id/sexo_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro de salud"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:layout_below="@id/name_data"
+    />
+
+    <TextView
+            android:id="@+id/sexo_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SANNA"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/sexo_lbl"
+    />
+
+    <TextView
+            android:id="@+id/nac_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celular"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:layout_below="@id/sexo_data"
+    />
+
+    <TextView
+            android:id="@+id/nac_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="929392929"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/nac_lbl"
+    />
+
+
+    <TextView
+            android:id="@+id/dic_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:layout_below="@id/nac_data"
+    />
+
+    <TextView
+            android:id="@+id/dic_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/dic_lbl"
+    />
+
+    <TextView
+            android:id="@+id/telf_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:layout_below="@id/dic_data"
+    />
+
+    <TextView
+            android:id="@+id/telf_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test@example.com"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            android:layout_below="@id/telf_lbl"
+            android:layout_marginBottom="20dp"
+    />
+
+    </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
