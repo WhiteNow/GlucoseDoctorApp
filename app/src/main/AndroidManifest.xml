@@ -20,6 +20,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".presentation.PatientsActivity">
+        </activity>
         <activity android:name=".presentation.glucose_measure.GlucoseMeasureActivity">
         </activity>
         <activity android:name=".presentation.patient_education.PatientEducActivity">

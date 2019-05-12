@@ -155,5 +155,31 @@ class FirebaseConnection {
             }
         }
 
+        fun getUsers(): Single<ArrayList<User>> {
+            var users: ArrayList<User> = ArrayList()
+            var user = User()
+            val doc = db.collection("Pacientes")
+            return Single.create<ArrayList<User>> { subscriber ->
+                doc.get().addOnCompleteListener {
+                        task ->
+                    val document = task.result
+                    Log.d("Bryam", "buscando...")
+                    if (document != null) {
+                        Log.d("Bryam", "Encontre 1...")
+                        for (documentSnapshot in document.documents) {
+                            Log.d("Bryam", "size is ${document.documents.size}")
+
+                            user = documentSnapshot.toObject(User::class.java)!!
+                            user.id = documentSnapshot.id
+                            users.add(user)
+                            Log.d("Bryam", "the id is ${documentSnapshot.id}")
+                            Log.d("Bryam", "the id is ${user.id}")
+                        }
+                    }
+                    subscriber.onSuccess(users)
+                }
+            }
+        }
+
     }
 }

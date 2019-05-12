@@ -48,38 +48,10 @@
            <ImageView
                    android:layout_width="92dp"
                    android:layout_height="95dp"
-                   android:src="@drawable/info_icon"
+                   android:src="@drawable/addPatient"
                    android:id="@+id/infoBtn"
                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/guideline"/>
-
-           <ImageView
-                   android:layout_width="80dp"
-                   android:layout_height="84dp"
-                   android:src="@drawable/diabetes_ic"
-                   android:id="@+id/glucoseBtn"
-                   android:layout_marginTop="18dp"
-                   app:layout_constraintTop_toTopOf="@+id/guideline2"
-                   app:layout_constraintStart_toStartOf="@+id/treatment_image"/>
-
-           <ImageView
-                   android:layout_width="100dp"
-                   android:layout_height="104dp"
-                   android:src="@drawable/chart_ic"
-                   android:id="@+id/reportsBtn"
-                   android:layout_marginTop="8dp"
-                   app:layout_constraintTop_toTopOf="@+id/guideline2"
-                   app:layout_constraintStart_toEndOf="@+id/glucoseBtn" android:layout_marginStart="8dp"
-                   app:layout_constraintEnd_toStartOf="@+id/educBtn" android:layout_marginEnd="8dp"/>
-
-           <ImageView
-                   android:layout_width="80dp"
-                   android:layout_height="84dp"
-                   android:src="@drawable/book"
-                   android:id="@+id/educBtn"
-                   android:layout_marginTop="17dp"
-                   app:layout_constraintTop_toTopOf="@+id/guideline2" app:layout_constraintEnd_toEndOf="@+id/infoBtn"
-                   android:layout_marginEnd="8dp"/>
 
 
            <TextView
@@ -87,7 +59,7 @@
                    android:layout_width="100dp"
                    android:layout_height="18dp"
                    android:textColor="@color/textColor"
-                   android:text="Tratamiento"
+                   android:text="Pacientes"
                    android:textAlignment="center"
                    android:layout_marginStart="24dp"
                    app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +71,7 @@
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:textColor="@color/textColor"
-                   android:text="Cita Médica"
+                   android:text="Citas"
                    android:textAlignment="center"
                    app:layout_constraintStart_toEndOf="@+id/txtTratamiento" android:layout_marginStart="8dp"
                    android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/txtInformation"
@@ -108,48 +80,13 @@
            <TextView
                    android:id="@+id/txtInformation"
                    android:layout_width="100dp"
-                   android:layout_height="21dp"
+                   android:layout_height="wrap_content"
                    android:textColor="@color/textColor"
-                   android:text="Mi Información"
+                   android:text="Nuevos Pacientes"
                    android:textAlignment="center"
                    android:layout_marginEnd="24dp"
                    app:layout_constraintEnd_toEndOf="parent"
                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
-
-           <TextView
-                   android:id="@+id/txtGlucosa"
-                   android:layout_width="100dp"
-                   android:layout_height="wrap_content"
-                   android:textColor="@color/textColor"
-                   android:text="Control de glucosa"
-                   android:textAlignment="center"
-                   android:layout_marginBottom="8dp"
-                   app:layout_constraintBottom_toTopOf="@+id/guideline3"
-                   android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="@+id/txtTratamiento"/>
-
-           <TextView
-                   android:id="@+id/txtReporte"
-                   android:layout_width="100dp"
-                   android:layout_height="wrap_content"
-                   android:textColor="@color/textColor"
-                   android:text="Reportes"
-                   android:textAlignment="center"
-                   android:layout_marginBottom="8dp"
-                   app:layout_constraintBottom_toTopOf="@+id/guideline3" android:layout_marginEnd="8dp"
-                   app:layout_constraintEnd_toStartOf="@+id/txtLearn"
-                   app:layout_constraintStart_toEndOf="@+id/txtGlucosa" android:layout_marginStart="8dp"/>
-
-           <TextView
-                   android:id="@+id/txtLearn"
-                   android:layout_width="100dp"
-                   android:layout_height="5mm"
-                   android:textColor="@color/textColor"
-                   android:text="Educando al paciente"
-                   android:textAlignment="center"
-                   app:autoSizeTextType="uniform"
-                   android:layout_marginBottom="8dp"
-                   app:layout_constraintBottom_toTopOf="@+id/guideline3"
-                   android:layout_marginEnd="18dp" app:layout_constraintEnd_toEndOf="parent"/>
 
            <TextView
                    android:id="@+id/txtNombre"
@@ -165,15 +102,6 @@
                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
                    app:layout_constraintTop_toBottomOf="@+id/profile_image"/>
 
-
-           <ImageView
-                   android:layout_width="100dp"
-                   android:layout_height="60dp"
-                   android:src="@drawable/emergency"
-                   android:id="@+id/imageView8"
-                   android:layout_marginTop="50dp"
-                   app:layout_constraintTop_toBottomOf="@+id/txtGlucosa" app:layout_constraintStart_toStartOf="@+id/txtGlucosa"
-           />
 
            <android.support.constraint.Guideline
                    android:orientation="horizontal"
