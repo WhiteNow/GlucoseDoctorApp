@@ -27,7 +27,6 @@ import pe.edu.upc.GlucoCheck.data.User
 import pe.edu.upc.GlucoCheck.data.UserManager
 import pe.edu.upc.GlucoCheck.presentation.home_menu.HomeMenuActivity
 import pe.edu.upc.GlucoCheck.presentation.sign_up.SignUpActivity
-import pe.edu.upc.GlucoCheck.presentation.treatments.TreatmentActivity
 import android.view.View.OnTouchListener
 
 

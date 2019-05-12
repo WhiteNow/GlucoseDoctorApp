@@ -48,7 +48,7 @@
            <ImageView
                    android:layout_width="92dp"
                    android:layout_height="95dp"
-                   android:src="@drawable/addPatient"
+                   android:src="@drawable/add_patient"
                    android:id="@+id/infoBtn"
                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
                    android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/guideline"/>
