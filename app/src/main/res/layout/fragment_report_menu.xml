@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/txt2Speech"-->
+            <!--android:src="@drawable/ic_volume_up_black_24dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:layout_marginEnd="24dp"-->
+            <!--/>-->
+
+            <TextView android:id="@+id/q_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Gráfico 1: Índice de Glucosa vs Fecha"
+                      android:textSize="16dp"
+                      android:layout_marginTop="24dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+            />
+
+            <TextView android:id="@+id/answer_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/q_lbl"
+                      android:textSize="18sp"
+                      android:layout_marginTop="6dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+                      android:textColor="#000"
+                      android:text="El presente gráfico muestra y describe el nivel de glucosa del paciente a través del tiempo"
+            />
+
+
+
+            <TextView android:id="@+id/q1_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Gráfico 2: Peso vs Fecha"
+                      android:textSize="16dp"
+                      android:layout_marginTop="16dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+                      android:layout_below="@id/answer_lbl"
+            />
+
+            <TextView android:id="@+id/answer1_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/q1_lbl"
+                      android:textSize="18sp"
+                      android:layout_marginTop="6dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+                      android:textColor="#000"
+                      android:text="Este gráfico muestra los cambios de peso a partir de los controles realizados en las consultas médicas"
+            />
+
+            <TextView android:id="@+id/q2_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Gráfico 3: Límites de Glucosa vs Fecha"
+                      android:textSize="16dp"
+                      android:layout_below="@id/answer1_lbl"
+                      android:layout_marginTop="12dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+            />
+
+            <TextView android:id="@+id/answer2_lbl"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/q2_lbl"
+                      android:textSize="18sp"
+                      android:layout_marginTop="6dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+                      android:textColor="#000"
+                      android:text="Este gráfico muestras las fechas en que la glucosa del paciente ha llegado a los níveles máximos o mínimos normales"
+                      android:layout_marginBottom="20dp"
+            />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
