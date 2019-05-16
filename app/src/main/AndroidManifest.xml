@@ -22,25 +22,12 @@
             android:theme="@style/AppTheme">
         <activity android:name=".presentation.PatientsActivity">
         </activity>
-        <activity android:name=".presentation.glucose_measure.GlucoseMeasureActivity">
+        <activity android:name=".presentation.reports.ReportsActivity">
         </activity>
-        <activity android:name=".presentation.patient_education.PatientEducActivity">
-        </activity>
-        <activity android:name=".presentation.my_info.MyInfoActivity">
-        </activity>
+
         <activity android:name=".presentation.appointmets.AppoinmentsActivity">
         </activity>
-        <activity android:name=".presentation.bluetooth_list.ScanBLEActivity">
-        </activity>
-        <activity android:name=".presentation.bluetooth_list.BLEActivity">
-        </activity>
-        <activity android:name=".presentation.bluetooth_list.BluetoothActivity">
-        </activity>
-        <activity
-                android:name=".presentation.treatments.TreatmentActivity"
-                android:label="@string/title_activity_treatment"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+
         <activity android:name=".presentation.sign_up.SignUpActivity">
         </activity>
         <activity android:name=".presentation.home_menu.HomeMenuActivity">

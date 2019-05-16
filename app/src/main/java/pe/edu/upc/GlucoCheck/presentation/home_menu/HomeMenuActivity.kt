@@ -9,6 +9,7 @@ import pe.edu.upc.GlucoCheck.R
 import pe.edu.upc.GlucoCheck.data.UserManager
 import pe.edu.upc.GlucoCheck.presentation.PatientsActivity
 import pe.edu.upc.GlucoCheck.presentation.appointmets.AppoinmentsActivity
+import pe.edu.upc.GlucoCheck.presentation.reports.ReportsActivity
 
 class HomeMenuActivity : AppCompatActivity() {
 
@@ -30,6 +31,11 @@ class HomeMenuActivity : AppCompatActivity() {
 
         infoBtn.setOnClickListener {
 
+        }
+
+        reportsBtn.setOnClickListener{
+            val intent = Intent(this, ReportsActivity::class.java)
+            startActivity(intent)
         }
 
     }
