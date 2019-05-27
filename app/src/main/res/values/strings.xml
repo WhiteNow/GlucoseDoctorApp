@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GlucoCheck</string>
+    <string name="app_name">DoctorAPP</string>
     <string name="login_string">Ingresar</string>
     <string name="password_hint">Password</string>
     <string name="usuario_hint">Usuario</string>

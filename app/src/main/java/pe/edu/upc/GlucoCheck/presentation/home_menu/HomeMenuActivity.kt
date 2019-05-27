@@ -17,7 +17,10 @@ class HomeMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        txtNombre.text = UserManager.user?.nombre
+        //val value = intent.getStringExtra("NombrePaciente")
+
+        txtNombre.text = UserManager.doctor?.nombre + " " + UserManager.doctor?.apellido
+        //txtNombre.text = value
 
         treatment_image.setOnClickListener {
             val intent = Intent(this, PatientsActivity::class.java)

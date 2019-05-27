@@ -1,19 +1,59 @@
 package pe.edu.upc.GlucoCheck.Networking
 
 import android.util.Log
+import android.widget.EditText
 import com.google.firebase.firestore.FirebaseFirestore
 import io.reactivex.Single
 import pe.edu.upc.GlucoCheck.data.*
+import kotlinx.android.synthetic.main.activity_patients.*
+import pe.edu.upc.GlucoCheck.R
+
 
 class FirebaseConnection {
 
     companion object {
 
         val db = FirebaseFirestore.getInstance()
-        fun getAppointments(): Single<ArrayList<AppointmentItem>> {
+
+        fun getUsersTotal(name : String): Single<ArrayList<User>> {
+            var users: ArrayList<User> = ArrayList()
+            var user = User()
+            val doc = db.collection("Pacientes").whereEqualTo("doctor_id","p0KSR8DbA3ey5fpPWvsx")
+            //doc.whereGreaterThanOrEqualTo("apellido","Flores")
+
+
+            return Single.create<ArrayList<User>> { subscriber ->
+                doc.get().addOnCompleteListener {
+                        task ->
+                    val document = task.result
+                    Log.d("Bryam", "buscando...")
+                    if (document != null) {
+                        Log.d("Bryam", "Encontre 1...")
+                        for (documentSnapshot in document.documents) {
+                            Log.d("Bryam", "size is ${document.documents.size}")
+
+                            if(documentSnapshot["apellido"].toString().contains(name, ignoreCase = true) || documentSnapshot["nombre"].toString().contains(name, ignoreCase = true)){
+                                user = documentSnapshot.toObject(User::class.java)!!
+                                user.id = documentSnapshot.id
+                                users.add(user)
+                                Log.d("Bryam", "the id is ${documentSnapshot.id}")
+                                Log.d("Bryam", "the id is ${user.id}")
+                            }
+
+
+
+                        }
+                    }
+                    subscriber.onSuccess(users)
+                }
+            }
+        }
+
+        fun getAppointmentsID(id : String): Single<ArrayList<AppointmentItem>> {
             var appointments: ArrayList<AppointmentItem> = ArrayList<AppointmentItem>()
             var appointment: AppointmentItem = AppointmentItem()
-            val doc = db.collection("Citas").whereEqualTo("paciente_id","JwvffihQuAeHwvBmLf2c")
+            val doc = db.collection("Citas").whereEqualTo("doctor_id","p0KSR8DbA3ey5fpPWvsx")
+                .whereEqualTo("paciente_id", id)
 
             return Single.create<ArrayList<AppointmentItem>> { subscriber ->
                 doc.get().addOnCompleteListener {
@@ -33,6 +73,58 @@ class FirebaseConnection {
                 }
             }
         }
+
+
+
+        fun getAppointments(): Single<ArrayList<AppointmentItem>> {
+            var appointments: ArrayList<AppointmentItem> = ArrayList<AppointmentItem>()
+            var appointment: AppointmentItem = AppointmentItem()
+            val doc = db.collection("Citas").whereEqualTo("doctor_id","p0KSR8DbA3ey5fpPWvsx")
+
+            return Single.create<ArrayList<AppointmentItem>> { subscriber ->
+                doc.get().addOnCompleteListener {
+                        task ->
+                    val document = task.result
+                    Log.d("Bryam", "Networkeando :v")
+                    if (document != null) {
+                        Log.d("Bryam", "Networkeando  dentro:v")
+                        for (documentSnapshot in document.documents) {
+                            Log.d("Bryam", "size is ${document.documents.size}  dentro:v")
+                            appointments.add(documentSnapshot.toObject(AppointmentItem::class.java)!!)
+
+                        }
+                        subscriber.onSuccess(appointments)
+
+                    }
+                }
+            }
+        }
+
+
+        fun getUserDoctor(email: String): Single<Doctor> {
+            var user = Doctor()
+            val doc = db.collection("Doctores").whereEqualTo("email",email)
+            return Single.create<Doctor> { subscriber ->
+                doc.get().addOnCompleteListener {
+                        task ->
+                    val document = task.result
+                    Log.d("Bryam", "buscando...")
+                    if (document != null) {
+                        Log.d("Bryam", "Encontre 1...")
+                        for (documentSnapshot in document.documents) {
+                            Log.d("Bryam", "size is ${document.documents.size}")
+
+                            user = documentSnapshot.toObject(Doctor::class.java)!!
+                            user.id = documentSnapshot.id
+                            Log.d("Bryam", "the id is ${documentSnapshot.id}")
+                            Log.d("Bryam", "the id is ${user.id}")
+                        }
+                    }
+                    subscriber.onSuccess(user)
+                }
+            }
+        }
+
 
         fun getUser(email: String): Single<User> {
             var user = User()
@@ -183,3 +275,4 @@ class FirebaseConnection {
 
     }
 }
+

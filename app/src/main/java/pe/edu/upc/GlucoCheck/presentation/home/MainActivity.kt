@@ -22,15 +22,17 @@ import kotlinx.android.synthetic.main.activity_main.*
 import pe.edu.upc.GlucoCheck.Networking.FirebaseConnection
 import pe.edu.upc.GlucoCheck.Networking.GlucosAppApi
 import pe.edu.upc.GlucoCheck.R
+import pe.edu.upc.GlucoCheck.data.*
 import pe.edu.upc.GlucoCheck.data.AppointmentItem
 import pe.edu.upc.GlucoCheck.data.User
 import pe.edu.upc.GlucoCheck.data.UserManager
 import pe.edu.upc.GlucoCheck.presentation.home_menu.HomeMenuActivity
 import pe.edu.upc.GlucoCheck.presentation.sign_up.SignUpActivity
 import android.view.View.OnTouchListener
-
-
-
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.iid.InstanceIdResult
+import com.google.firebase.messaging.FirebaseMessaging
 
 
 class MainActivity : AppCompatActivity(){
@@ -43,6 +45,27 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("TAG", "getInstanceId failed", task.exception)
+                    return@OnCompleteListener
+                }
+
+                // Get new Instance ID token
+                val token = task.result?.token
+
+                // Log and toast
+                //val msg = getString(R.string.msg_token_fmt, token)
+                Log.d("TAG", token)
+                //Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+            })
+
+
+
+        //Log.e("new token",keey)
 
         auth = FirebaseAuth.getInstance()
         Log.d("Main", "signInWithEmail:success")
@@ -97,10 +120,10 @@ class MainActivity : AppCompatActivity(){
     }
 
     fun getUser(email: String) {
-        var disposable = FirebaseConnection.getUser(email).subscribe ({
+        var disposable = FirebaseConnection.getUserDoctor(email).subscribe ({
                 subie ->
             Log.d("Bryam", "size while observing ${subie}")
-            UserManager.user = subie
+            UserManager.doctor = subie
             progresDialog.dismiss()
             val intent = Intent(this, HomeMenuActivity::class.java)
             startActivity(intent)
