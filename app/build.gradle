@@ -23,13 +23,14 @@ android {
 }
 
 dependencies {
-    implementation 'com.google.firebase:firebase-firestore:19.0.0'
+    implementation 'com.google.firebase:firebase-firestore:19.0.2'
 
     // Other Firebase/Play services deps
     implementation 'com.google.firebase:firebase-auth:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
     // FirebaseUI (for authentication)
+    //implementation 'com.google.android.gms:play-services-auth:9.4.0'i
     implementation 'com.firebaseui:firebase-ui-auth:4.3.2'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -54,6 +55,7 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.jjoe64:graphview:4.2.2'
     implementation 'com.google.firebase:firebase-messaging:18.0.0'
+    implementation 'com.google.firebase:firebase-functions:17.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:524359549487:android:6e0a60affe2fbfd3",
+        "mobilesdk_app_id": "1:524359549487:android:4675936b51fe5514",
         "android_client_info": {
-          "package_name": "pe.edu.upc.GlucoCheck"
+          "package_name": "com.example.appreport"
         }
       },
       "oauth_client": [
@@ -25,15 +25,50 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524359549487-1rhgnqfn29b16d44qk7eqlv6mhgannj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524359549487:android:6e0a60affe2fbfd3",
+        "android_client_info": {
+          "package_name": "pe.edu.upc.GlucoCheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524359549487-qnioj06o7np5f1bgrd3iku8biprlmd5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pe.edu.upc.GlucoCheck",
+            "certificate_hash": "ec12e05117f42fa3b45bce472b4e1486fd72f979"
+          }
         },
-        "ads_service": {
-          "status": 2
+        {
+          "client_id": "524359549487-1rhgnqfn29b16d44qk7eqlv6mhgannj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyWh9wWHTaqIAStJgo_H-wp7aYVDhEcIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524359549487-1rhgnqfn29b16d44qk7eqlv6mhgannj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
